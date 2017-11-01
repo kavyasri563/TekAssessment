@@ -23,7 +23,7 @@ public class Calculator {
 	 * 
 	 * For each order, print the total Sales Tax paid and Total price without taxes for this order
 	 */
-	public void calculate(Map<String, Order> o) {
+	public double calculate(Map<String, Order> o) {
 
 		double grandtotal = 0;
 		// Iterate through the orders
@@ -73,5 +73,6 @@ public class Calculator {
 		}
 
 		System.out.println("Sum of orders: " + Math.floor(grandtotal * 100) / 100);
+		return Math.floor(grandtotal * 100) / 100;
 	}
 }
